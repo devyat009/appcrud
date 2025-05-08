@@ -1,0 +1,21 @@
+/* Tailwind base styles */
+@use "tailwindcss";
+
+/* PrimeNG default theme */
+@import '~primeng/resources/themes/lara-light-indigo/theme.css'; /* You can keep the same or choose another theme */
+@import '~primeng/resources/primeng.min.css';
+@import '~primeicons/primeicons.css';
+
+/* Custom Dark Theme Overrides */
+$primary-color: #333333;
+$primary-color-text: #fff;
+$background-color: #1A1A1A;
+
+body {
+  background-color: $background-color;
+  color: $primary-color-text;
+}
+
+.background-color {
+  background-color: $background-color;
+}

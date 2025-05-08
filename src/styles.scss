@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@use "tailwindcss" as *;
+@use './light-theme.scss';
+@use './dark-theme.scss';
+
+
+
+html.light-theme {
+  --background-color: #fff;
+  --text-color: #000;
+}
+
+html.dark-theme {
+  --background-color: #333;
+  --text-color: #fff;
+}
