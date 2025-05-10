@@ -1,9 +1,11 @@
 <router-outlet>
   <div class="app-container">
-    <button pButton label="Toggle Theme" (click)="toggleTheme()"></button>
-    <div>
-      <h1>Welcome to the app!</h1>
-      <p>Click the button to toggle the theme.</p>
+      <div>
+        <h1>Welcome to the app!</h1>
+        <p>Click the button to toggle the theme.</p>
+        <button (click)="changeTheme('theme-light')">Light Theme</button>
+        <button (click)="changeTheme('theme-dark')">Dark Theme</button>
+      </div>
     </div>
-  </div>
+</router-outlet>
 

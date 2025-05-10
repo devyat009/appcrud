@@ -29,6 +29,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*.css",
+                "input": "src/",
+                "output": "assets/themes/"
               }
             ],
             "styles": [
@@ -98,7 +103,18 @@
             "styles": [
               "src/styles.scss",
               "node_modules/primeng/resources/themes/lara-light-indigo/theme.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "node_modules/primeng/resources/primeng.min.css",
+              {
+                "bundleName": "dark-theme",
+                "input": "src/themes-dark.css",
+                "inject": false
+              },
+              {
+                "bundleName": "light-theme",
+                "input": "src/themes-light.css",
+                "inject": false
+              }
+
             ],
             "scripts": []
           }

@@ -1,5 +1,6 @@
 import { Component, Renderer2 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ThemeService } from './theming.service';
 
 @Component({
   selector: 'app-root',
@@ -11,38 +12,13 @@ export class AppComponent {
   title = 'app-crud';
 
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private themeService: ThemeService) {}
 
-  toggleTheme() {
-    const currentTheme = document.documentElement.classList.contains('dark-theme');
-
-    if (currentTheme) {
-      this.setLightTheme();
-    } else {
-      this.setDarkTheme();
-    }
+  ngOnInit() {
+    console.log('started app');
   }
 
-  // Apply light theme
-  setLightTheme() {
-    this.renderer.removeClass(document.documentElement, 'dark-theme');
-    this.renderer.addClass(document.documentElement, 'light-theme');
-    this.changeStylesheet('light-theme');
-  }
-
-  // Apply dark theme
-  setDarkTheme() {
-    this.renderer.removeClass(document.documentElement, 'light-theme');
-    this.renderer.addClass(document.documentElement, 'dark-theme');
-    this.changeStylesheet('dark-theme');
-  }
-
-  // Change stylesheet dynamically
-  changeStylesheet(theme: string) {
-    const themeLink = document.getElementById('theme-stylesheet') as HTMLLinkElement;
-
-    if (themeLink) {
-      themeLink.href = `${theme}.css`;
-    }
+  changeTheme(theme: string) {
+    this.themeService.switchTheme(theme);
   }
 }

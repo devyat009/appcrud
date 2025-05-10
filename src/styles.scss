@@ -1,15 +1,15 @@
 @use "tailwindcss" as *;
-@use './light-theme.scss';
-@use './dark-theme.scss';
+@use './themes-light.scss';
+@use './themes-dark.scss';
 
 
 
-html.light-theme {
+html.theme-light {
   --background-color: #fff;
   --text-color: #000;
 }
 
-html.dark-theme {
+html.theme-dark {
   --background-color: #333;
   --text-color: #fff;
 }
