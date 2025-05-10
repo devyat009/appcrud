@@ -19,6 +19,7 @@ export class AppComponent {
   }
 
   changeTheme(theme: string) {
+    console.log('changing theme 1: ', theme);
     this.themeService.switchTheme(theme);
   }
 }
